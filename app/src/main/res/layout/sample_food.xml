@@ -20,7 +20,7 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:id="@+id/imageView2"
+                android:id="@+id/imageViewDish"
                 android:layout_width="303dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
