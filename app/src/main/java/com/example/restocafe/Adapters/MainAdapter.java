@@ -28,20 +28,24 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.viewholder>{
     @NonNull
     @Override
     public viewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-
         View view = LayoutInflater.from(context).inflate(R.layout.sample_food,parent,false);
-
-        return null;
+        return new viewholder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull viewholder holder, int position) {
 
+        final MainModel model = list.get(position);
+        holder.foodimage.setImageResource(model.getImage());
+        holder.mainName.setText(model.getName());
+        holder.dishPrice.setText(model.getPrice());
+        holder.DishDesc.setText(model.getDescription());
+
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return list.size();
     }
 
     public class viewholder extends RecyclerView.ViewHolder {
